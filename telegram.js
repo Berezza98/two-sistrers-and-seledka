@@ -11,7 +11,7 @@ function sendMessage(message) {
       promiseArr.push(bot.sendMessage(chatID, message));
     });
 
-    Promise.all(promiseArr).then(resolve);
+    Promise.allSettled(promiseArr).then(resolve);
   });
 }
 
