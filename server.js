@@ -18,7 +18,7 @@ app.post('/', async (req, res) => {
 });
 
 app.use((req, res) => {
-  res.sendStatus(404).send('Unhandled route');
+  res.sendStatus(404);
 });
 
 app.listen(process.env.PORT);
