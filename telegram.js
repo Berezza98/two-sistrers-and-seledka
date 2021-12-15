@@ -4,7 +4,7 @@ const bot = new Telegram(process.env.BOT_TOKEN);
 
 function sendMessage(message) {
   return new Promise((resolve, reject) => {
-    const chatIDs = process.env.CHAT_IDS.split(' ').map(id => parseInt(id));
+    const chatIDs = process.env.CHAT_IDS.split('-').map(id => parseInt(id));
     const promiseArr = [];
   
     chatIDs.forEach(chatID => {
